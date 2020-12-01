@@ -5,10 +5,8 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
+public class Day1Test {
 
-public class Day1aTest {
-
-    //correct answer: first number: 618; second number: 1402; result: 866436
     private static List<Integer> INPUT_DATA = Arrays.asList(1567, 1223, 1758, 1842, 1933, 1898, 1409, 1058, 1533, 1417,
             1032, 1634, 1477, 1394, 1888, 1972, 1237, 1390, 1677, 1546, 1302, 1070, 1369, 1455, 1065, 1924, 1593,
             1131, 1064, 1346, 1914, 1129, 1830, 1450, 1278, 1740, 1809, 1176, 1734, 1102, 1807, 1982, 1603, 1736,
@@ -22,9 +20,17 @@ public class Day1aTest {
             1476, 928, 1039, 1855, 1644, 1454, 1310, 1172, 547, 1034, 1878, 1479, 1457, 1319, 1810, 1759, 1439, 1851,
             545, 1470, 2003, 1908, 1564, 1491, 1174, 1301, 1689, 1276, 1781, 1392, 1499, 1962, 1653, 1823, 1381, 1827, 1974);
 
+    //correct answer: first number: 618; second number: 1402; result: 866436
     @Test
-    public void run() {
-        String result = new Day1a().findValidAndMultiply(INPUT_DATA);
+    public void runForTwoSum() {
+        String result = new Day1().findTwoValidAndMultiply(INPUT_DATA);
+        System.out.println(result);
+    }
+
+    //correct answer: first number: 928; second number: 547; third number: 545; result: 276650720
+    @Test
+    public void runForThreeSum() {
+        String result = new Day1().findThreeValidAndMultiply(INPUT_DATA);
         System.out.println(result);
     }
 }
