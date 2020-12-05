@@ -1,6 +1,5 @@
 package com.adventofcode2020;
 
-import com.adventofcode2020.tools.Day4;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -42,4 +41,11 @@ public class TestsRunner {
         int result = new Day4().countValidPassportsWithAdditionalValidation();
         System.out.println(result);
     }
+
+    @Test
+    public void day5RunFirst() throws IOException {
+        int result = new Day5().findMaxSeatId();
+        System.out.println(result);
+    }
+
 }

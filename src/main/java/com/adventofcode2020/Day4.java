@@ -1,6 +1,8 @@
-package com.adventofcode2020.tools;
+package com.adventofcode2020;
 
 import com.adventofcode2020.dto.PassportDto;
+import com.adventofcode2020.tools.CommonUtils;
+import com.adventofcode2020.tools.ParamsValidator;
 
 import java.io.IOException;
 import java.util.Arrays;
