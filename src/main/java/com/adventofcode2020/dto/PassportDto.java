@@ -73,4 +73,18 @@ public class PassportDto {
     public void setCountryId(String countryId) {
         this.countryId = countryId;
     }
+
+    @Override
+    public String toString() {
+        return "PassportDto{" +
+                "birthYear='" + birthYear + '\'' +
+                ", issueYear='" + issueYear + '\'' +
+                ", expirationYear='" + expirationYear + '\'' +
+                ", height='" + height + '\'' +
+                ", hairColor='" + hairColor + '\'' +
+                ", eyeColor='" + eyeColor + '\'' +
+                ", passportId='" + passportId + '\'' +
+                ", countryId='" + countryId + '\'' +
+                '}';
+    }
 }

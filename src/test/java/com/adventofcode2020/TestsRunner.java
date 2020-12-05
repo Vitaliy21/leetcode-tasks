@@ -39,7 +39,7 @@ public class TestsRunner {
 
     @Test
     public void day4RunSecond() throws IOException {
-        int result = new Day4().countValidPassports();
+        int result = new Day4().countValidPassportsWithAdditionalValidation();
         System.out.println(result);
     }
 }
