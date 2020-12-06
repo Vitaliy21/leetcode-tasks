@@ -3,6 +3,7 @@ package com.adventofcode2020;
 import org.junit.Test;
 
 import java.io.IOException;
+ import java.util.List;
 
 public class TestsRunner {
 
@@ -44,7 +45,13 @@ public class TestsRunner {
 
     @Test
     public void day5RunFirst() throws IOException {
-        int result = new Day5().findMaxSeatId();
+        List<Integer> result = new Day5().findSeatsIds();
+        System.out.println(result.get(result.size()-1));
+    }
+
+    @Test
+    public void day5RunSecond() throws IOException {
+        int result = new Day5().findYourSeatId();
         System.out.println(result);
     }
 

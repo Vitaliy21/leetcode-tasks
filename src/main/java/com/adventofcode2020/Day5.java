@@ -12,7 +12,7 @@ public class Day5 {
     private final static String SOURCE_FILE = "src/main/resources/adventofcode2020/day5.txt";
 
     //correct answer: 866
-    public int findMaxSeatId() throws IOException {
+    public List<Integer> findSeatsIds() throws IOException {
         List<Integer> seatsIds = new ArrayList<>();
         List<String> inputData = CommonUtils.readFileAsListOfLines(SOURCE_FILE);
         for (String line : inputData) {
@@ -26,7 +26,20 @@ public class Day5 {
         }
 
         Collections.sort(seatsIds);
-        return seatsIds.get(seatsIds.size()-1);
+        return seatsIds;
+    }
+
+    //correct answer: 583
+    public int findYourSeatId() throws IOException {
+        List<Integer> seatsIds = findSeatsIds();
+        int delta = -1;
+        for (int id : seatsIds) {
+            if (id-seatsIds.get(Math.abs(delta)) > 1) {
+                return id-1;
+            }
+            delta++;
+        }
+        return 0;
     }
 
     private int decodeNumber(String code, int from, int to) {
