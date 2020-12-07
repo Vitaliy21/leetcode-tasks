@@ -61,4 +61,10 @@ public class TestsRunner {
         System.out.println(result);
     }
 
+    @Test
+    public void day6RunSecond() throws IOException {
+        int result = new Day6().countGroupYesAnswers();
+        System.out.println(result);
+    }
+
 }
