@@ -55,4 +55,10 @@ public class TestsRunner {
         System.out.println(result);
     }
 
+    @Test
+    public void day6RunFirst() throws IOException {
+        int result = new Day6().countYesAnswers();
+        System.out.println(result);
+    }
+
 }
