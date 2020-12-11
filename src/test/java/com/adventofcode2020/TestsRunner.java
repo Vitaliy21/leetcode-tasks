@@ -69,7 +69,13 @@ public class TestsRunner {
 
     @Test
     public void day7RunFirst() throws IOException {
-        int result = new Day7().countBags();
+        int result = new Day7().countParentBags();
+        System.out.println(result);
+    }
+
+    @Test
+    public void day7RunSecond() throws IOException {
+        int result = new Day7().countChildBags();
         System.out.println(result);
     }
 
