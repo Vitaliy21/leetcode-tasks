@@ -3,7 +3,6 @@ package com.adventofcode2020;
 import com.adventofcode2020.tools.CommonUtils;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
@@ -42,6 +41,7 @@ public class Day7 {
         return result;
     }
 
+    //correct answer: 6683
     public int countChildBags() throws IOException {
         List<String> inputData = CommonUtils.readFileAsListOfLines(SOURCE_FILE);
         Map<String, Integer> bagsMap = new LinkedHashMap<>();

@@ -3,7 +3,7 @@ package com.adventofcode2020;
 import org.junit.Test;
 
 import java.io.IOException;
- import java.util.List;
+import java.util.List;
 
 public class TestsRunner {
 
@@ -76,6 +76,12 @@ public class TestsRunner {
     @Test
     public void day7RunSecond() throws IOException {
         int result = new Day7().countChildBags();
+        System.out.println(result);
+    }
+
+    @Test
+    public void day8RunFirst() throws IOException {
+        int result = new Day8().accumulatorValue();
         System.out.println(result);
     }
 
