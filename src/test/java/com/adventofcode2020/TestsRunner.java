@@ -91,4 +91,10 @@ public class TestsRunner {
         System.out.println(result);
     }
 
+    @Test
+    public void day9RunFirst() throws IOException {
+        long result = new Day9().getNumberThatHaveNotSum();
+        System.out.println(result);
+    }
+
 }
