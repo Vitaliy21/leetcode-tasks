@@ -3,6 +3,7 @@ package com.adventofcode2020;
 import com.adventofcode2020.tools.CommonUtils;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,6 +24,32 @@ public class Day9 {
             preamble ++;
         }
         return 0;
+    }
+
+    //correct answer: 13935797
+    public long defineSetOfSumNumber() throws IOException {
+        List<Long> inputData = CommonUtils.readFileAsListOfLines(SOURCE_FILE).stream().map(Long::parseLong).collect(Collectors.toList());
+        long number = 104054607;
+        int startIndex = 0;
+        while (true) {
+            long sumOfSet = 0;
+            for (int i = startIndex; i <= inputData.size()-1; i++) {
+                sumOfSet += inputData.get(i);
+                if (sumOfSet == number) {
+                    return calculateResult(inputData, startIndex, i);
+                } else if (sumOfSet > number) {
+                    break;
+                } else continue;
+            }
+            startIndex ++;
+        }
+
+    }
+
+    private long calculateResult(List<Long> inputData, int firstIndex, int lastIndex) {
+        List<Long> subList = inputData.subList(firstIndex, lastIndex);
+        Collections.sort(subList);
+        return subList.get(0) + subList.get(subList.size() - 1);
     }
 
     private boolean isContainSum(List<Long> subList, long integer) {

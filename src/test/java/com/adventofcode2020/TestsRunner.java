@@ -97,4 +97,10 @@ public class TestsRunner {
         System.out.println(result);
     }
 
+    @Test
+    public void day9RunSecond() throws IOException {
+        long result = new Day9().defineSetOfSumNumber();
+        System.out.println(result);
+    }
+
 }
