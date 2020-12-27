@@ -1,5 +1,6 @@
 package com.adventofcode2020;
 
+import com.Day10;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -100,6 +101,12 @@ public class TestsRunner {
     @Test
     public void day9RunSecond() throws IOException {
         long result = new Day9().defineSetOfSumNumber();
+        System.out.println(result);
+    }
+
+    @Test
+    public void day10RunFirst() throws IOException {
+        int result = new Day10().getMultipliedJolts();
         System.out.println(result);
     }
 
