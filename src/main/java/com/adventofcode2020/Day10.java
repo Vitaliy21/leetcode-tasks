@@ -1,9 +1,8 @@
-package com;
+package com.adventofcode2020;
 
 import com.adventofcode2020.tools.CommonUtils;
 
 import java.io.IOException;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,8 +13,7 @@ public class Day10 {
     public int getMultipliedJolts() throws IOException {
         int diffsBy1 = 1;
         int diffsBy3 = 1;
-        List<Integer> inputData = CommonUtils.readFileAsListOfLines(SOURCE_FILE).stream().map(Integer::parseInt).collect(Collectors.toList());
-        Collections.sort(inputData);
+        List<Integer> inputData = CommonUtils.readFileAsListOfLines(SOURCE_FILE).stream().map(Integer::parseInt).sorted().collect(Collectors.toList());
 
         Iterator<Integer> iterator = inputData.iterator();
         int current = 0;

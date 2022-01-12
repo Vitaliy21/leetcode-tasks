@@ -1,6 +1,5 @@
 package com.adventofcode2020;
 
-import com.Day10;
 import org.junit.Test;
 
 import java.io.IOException;
